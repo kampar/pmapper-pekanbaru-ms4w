@@ -1,0 +1,435 @@
+MAP
+  DEFRESOLUTION 96
+  EXTENT 765083.48553851 55792.2135842045 776139.323586272 63749.2656708361
+  FONTSET "D:\\w32\\MapManager\\templates\\font.list"
+  IMAGETYPE "png24"
+  NAME "MS"
+  RESOLUTION 96
+  SHAPEPATH ""
+  SIZE 843 607
+  STATUS ON
+  SYMBOLSET "D:\\w32\\MapManager\\templates\\symbols.sym"
+  UNITS METERS
+
+  OUTPUTFORMAT
+    NAME "png24"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGB
+    TRANSPARENT FALSE
+  END # OUTPUTFORMAT
+
+  OUTPUTFORMAT
+    NAME "print"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGB
+    TRANSPARENT FALSE
+  END # OUTPUTFORMAT
+
+  PROJECTION
+    "proj=utm"
+    "zone=47"
+    "datum=WGS84"
+    "units=m"
+    "no_defs"
+  END # PROJECTION
+  LEGEND
+    KEYSIZE 20 10
+    KEYSPACING 5 5
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    STATUS OFF
+  END # LEGEND
+
+  QUERYMAP
+    SIZE -1 -1
+    STATUS OFF
+    STYLE HILITE
+  END # QUERYMAP
+
+  SCALEBAR
+    INTERVALS 4
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    SIZE 200 3
+    STATUS OFF
+    UNITS MILES
+  END # SCALEBAR
+
+  WEB
+    METADATA
+      "distance_units"	"MS_METERS"
+      "mapmanager_version"	"1.0.0.0"
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+  END # WEB
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\kecamatan.shp"
+    CONNECTIONTYPE OGR
+    LABELITEM "Kecamatan"
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "kecamatan"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      LABEL
+        FONT "arial-black"
+        SIZE 12
+        OFFSET 0 0
+        POSITION CC
+        SHADOWCOLOR 116 116 116
+        SHADOWSIZE 1 1
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 0 255 0
+        OUTLINECOLOR 128 128 0
+        PATTERN
+         1.00 4.00 8.00 4.00
+        END # PATTERN
+        SIZE 8
+        SYMBOL "DotDash-2"
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\sungai_polygon.shp"
+    CONNECTIONTYPE OGR
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "sungai_polygon"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query.html"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      STYLE
+        COLOR 255 128 255
+        OUTLINECOLOR 0 0 0
+        SIZE 8
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "C:\\GIS\\SHP\\kelurahan.shp"
+    CONNECTIONTYPE OGR
+    LABELITEM "Kelurahan"
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "kelurahan"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      LABEL
+        FONT "arial-black"
+        SIZE 10
+        OFFSET 0 0
+        POSITION CC
+        SHADOWCOLOR 130 130 130
+        SHADOWSIZE 1 1
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        OUTLINECOLOR 0 0 255
+        PATTERN
+         4.00 2.00
+        END # PATTERN
+        SIZE 8
+        SYMBOL "Dash-2"
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\kantor_lurah.shp"
+    CONNECTIONTYPE OGR
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "kantor_lurah"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      LABEL
+        FONT "arial"
+        SIZE 8
+        OFFSET 0 0
+        POSITION CC
+        SHADOWSIZE 1 1
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 255 128 0
+        SIZE 12
+        SYMBOL "House"
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\kantor_pemerintahan.shp"
+    CONNECTIONTYPE OGR
+    LABELITEM "Nama_Kanto"
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "kantor_pemerintahan"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      LABEL
+        FONT "arial"
+        SIZE 8
+        OFFSET 0 0
+        POSITION CC
+        SHADOWSIZE 1 1
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 128 128 0
+        SIZE 12
+        SYMBOL "House"
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\jalan_arteri.shp"
+    CONNECTIONTYPE OGR
+    LABELITEM "Nama_Ruas"
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "jalan_arteri"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      LABEL
+        FONT "arial"
+        SIZE 8
+        OFFSET 0 0
+        POSITION CC
+        SHADOWSIZE 1 1
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 0 0 0
+        SIZE 8
+        WIDTH 2
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\jalan_lingkungan.shp"
+    CONNECTIONTYPE OGR
+    LABELITEM "Nama_Ruas"
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "jalan_lingkungan"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      LABEL
+        FONT "arial"
+        SIZE 8
+        OFFSET 0 0
+        POSITION CC
+        SHADOWSIZE 1 1
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 0 0 0
+        SIZE 8
+        WIDTH 1.8
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\jalan_kolektor.shp"
+    CONNECTIONTYPE OGR
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "jalan_kolektor"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query.html"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      STYLE
+        COLOR 0 0 0
+        SIZE 8
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\jalan_gang.shp"
+    CONNECTIONTYPE OGR
+    METADATA
+      "coordsys_name"	"WGS 84 / UTM zone 47N"
+    END # METADATA
+    NAME "jalan_gang"
+    PROJECTION
+      "proj=utm"
+      "zone=47"
+      "datum=WGS84"
+      "units=m"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query.html"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      STYLE
+        COLOR 0 0 0
+        SIZE 8
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\jalan_perumahan.shp"
+    CONNECTIONTYPE OGR
+    METADATA
+      "coordsys_name"	"Longitude-Latitude / Unknown datum based upon the WGS 84 ellipsoid"
+    END # METADATA
+    NAME "jalan_perumahan"
+    PROJECTION
+      "proj=longlat"
+      "ellps=WGS84"
+      "no_defs"
+    END # PROJECTION
+    STATUS ON
+    TEMPLATE "query.html"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Class (0)"
+      STYLE
+        COLOR 0 0 0
+        SIZE 8
+      END # STYLE
+      TEMPLATE "query.html"
+    END # CLASS
+  END # LAYER
+
+END # MAP

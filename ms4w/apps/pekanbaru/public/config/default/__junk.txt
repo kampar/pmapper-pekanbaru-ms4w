@@ -1,0 +1,23 @@
+
+
+
+
+	# dua baris di bawah ini gaya MapServer MapManager, tapi saya lebih suka menggunakan DATA dan TYPE
+    #CONNECTION "D:\\ms4w\\apps\\pekanbaru\\data\\kantor_lurah.shp"
+    #CONNECTIONTYPE OGR
+
+	
+KALAU ERROR DI LAMAN UTAMA, COBA BUKA LAMAN PRINTMAP	
+http://localhost:81/pekanbaru/printmap.phtml?printscale=140000&printrefmap=on&printtitle=&papersize=A4&orientation=P&maptype=normal&PHPSESSID=g8j9kc5ds7vp4fnqfeh1i4gvd5&config=default
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
