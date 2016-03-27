@@ -1,3 +1,5 @@
+# don't include this README.md so it won't replace others
+README.md
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
